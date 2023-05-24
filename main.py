@@ -1,6 +1,5 @@
 import random
 
-# Instanciations des variables de jeu
 nb_portes = 3 # Nombre de portes dans le jeu
 nb_jeux = 10000 # Nombre de jeux à effectuer
 aleatoire_presentateur = True # Le présentateur choisit-il aléatoirement la porte à ouvrir ?
@@ -32,10 +31,8 @@ def choix_presentateur(portes_restantes, porte_gagnante, choix_joueur, aleatoire
                 return choix
 
 def jeu(nb_portes, nb_jeux, joueur_change, aleatoire_presentateur):
-    # Variables de statistiques
     defaites = 0
     victoires = 0
-    # -------------------------
     for i in range(nb_jeux):
         portes = init_portes(nb_portes)
         porte_gagnante = init_porte_gagnante(nb_portes)
@@ -51,11 +48,10 @@ def jeu(nb_portes, nb_jeux, joueur_change, aleatoire_presentateur):
             victoires += 1
         else:
             defaites += 1
-    # -------------------------
     print("\t> Défaites : " + str(defaites) + " (" + str(round(defaites/(defaites+victoires)*100,2)) + "%)")
     print("\t> Victoires : " + str(victoires) + " (" + str(round(victoires/(defaites+victoires)*100,2)) + "%))")
 
-
+# Programme principal
 print("Nombre de jeux : " + str(nb_jeux) + " - Nombre de portes : " + str(nb_portes))
 print("\nJeu sans changement de porte et sans choix aléatoire du présentateur :")
 jeu(nb_portes, nb_jeux, False, False)
