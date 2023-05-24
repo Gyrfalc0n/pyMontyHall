@@ -1,7 +1,7 @@
 import random
 
 nb_portes = 3 # Nombre de portes dans le jeu
-nb_jeux = 10000 # Nombre de jeux à effectuer
+nb_jeux = 100000 # Nombre de jeux à effectuer
 aleatoire_presentateur = True # Le présentateur choisit-il aléatoirement la porte à ouvrir ?
 joueur_change = True # Le joueur change-t-il de porte après que le présentateur ait ouvert une porte ?
 
